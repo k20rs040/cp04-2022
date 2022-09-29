@@ -209,7 +209,12 @@
             $("#remain").html("残り時間：" + rest);
             analog(rest);
         }
-        
+        //タイマーの終了処理
+        if(rest <= 0) {
+            active = false;
+            alarm();
+        }
+         
     } 
 
   </script>
